@@ -8,7 +8,7 @@ A simple neural network utilizing the classic deep learning model showcasing how
 - [Project Structure](#project-structure)
 - [Files](#Files)
   - [1. Abstract Activation Function](#1-abstract-activation-function)
-  - [2. Sigmoid Activation](#2-sigmoid-function)
+  - [2. Sigmoid Activation](#2-sigmoid-activation)
   - [3. Neuron](#3-neuron)
   - [4. Layer](#4-layer)
   - [5. Network](#5-network)
@@ -45,14 +45,31 @@ This project is meant to demonstrate a basic deep learning model from scratch, u
 - Usage: to be inherited activation function, in this case, the sigmoid function. 
 ### 2. Sigmoid Activation
 - Definition: a sigmoid function is a mathematical function in the form σ(x)=1/(1+e^(−x)​). This creates an "S-shaped" curve which takes an input of x and outputs a value between 0 and 1.
-- Purpose: 
-- 
+- Purpose: to implement the activation function as well as it's derivative function
+- Key Methods:
+  -Output(x): returns the sigmoid of x
+  -OutputPrime(x): return the derivative of the sigmoid of x
+- Usage: pass into the neuron to define how the neuron should transform input and compute its derivative
 ### 3. Neuron
-
+- Purpose: defines a single neuron which includes the follow elements:
+  - Weights: an array of weights for each input connection
+  - Bias: a scalar bias added to the weighted sum
+  - Activation Function: in this case the sigmoid function
+  - Current Output(A): the neuron's activation after the forward pass
+  - Current Derivative(APrime): the derivative of the activation funcion at the current input
+- Key Methods:
+  - Output(input): computes z = sum(xi * wi) + Bias, then applying the activation function
+  - RandomizeWeights(fanout, randGenerator): generates random initialization weights
+  - RandomizeBias(randGenerator): initializies the bias randomly
+- Usage: to be called by the layer class
 ### 4. Layer
-
+- Purpose:
+- Key Methods:
+- Usage: 
 ### 5. Network
-
+- Purpose:
+- Key Methods:
+- Usage: 
 ### 6. Backpropagation Methods
 
 
