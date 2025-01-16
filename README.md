@@ -63,13 +63,25 @@ This project is meant to demonstrate a basic deep learning model from scratch, u
   - RandomizeBias(randGenerator): initializies the bias randomly
 - Usage: to be called by the layer class
 ### 4. Layer
-- Purpose:
+- Purpose: to group many neurons into a single layer
+  - numNeurons: number of neurons in layer
+  - inputsPerNeuron: How many inputs per neuron is expected
+  - NeuronArray: a list of neuron class objects
+  - Layer: stores the ouput vector of entire layer
+  - LayerPrime: Stores the derivative vector for the layer's neurons
 - Key Methods:
-- Usage: 
+  - Output(inputArray): feeds the input array data to each neuron, goes to layer output
+  - OutputPrime(): collects the derivatives of each neuron
+  - GetWMatrix() and GetBMatrix(): return the layer's weights and bias in matrix form
+  - setWMatrix() and setBMatrix(): sets the layers weights and biases of the given matrix
+  - RandomizeLayerWeights() and RandomizeLayerBias(): randomly initializes the layers parameters
+- Usage: to be used by the network class to build models with many layers
 ### 5. Network
-- Purpose:
+- Purpose: Represents the entire model network with 1+ layers. 
 - Key Methods:
-- Usage: 
+  -Output(input): feed the data through each layer
+  - RandomizeAll(): randomly initializes all weights and biases across all layers
+- Usage: primary way to build the network
 ### 6. Backpropagation Methods
 
 
