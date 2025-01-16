@@ -83,6 +83,13 @@ This project is meant to demonstrate a basic deep learning model from scratch, u
   - RandomizeAll(): randomly initializes all weights and biases across all layers
 - Usage: primary way to build the network
 ### 6. Backpropagation Methods
+- Purpose: Implements various methods to train the neural network with gradient descent approaches
+- Key Methods:
+  -GradientDescent(net,input,y,learningRate): perform a single step of gradient descent on the given network given a single training example of input, y), using the chain rule to calculate deltas and updating weights and biases accordingly
+  -ComputeAllDeltas(net, input,y): compute the error derivatives for each layer after a forward pass, storing them in an array
+  - StochasticGradientDescent: implements the same as Gradient Descent, but stochastic
+  - BatchGradient Descent(net, inputs,targets,learningRate, numIterations): demonstrates many gradients could be accumulated before updating. 
+- Usage: primary way to build the network
 
 
 
