@@ -7,12 +7,12 @@ A simple neural network utilizing the classic deep learning model showcasing how
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Files](#Files)
-  - [1. Abstract Activation Function](#1-convex-hull-problem)
-  - [2. Sigmoid Activation](#3-loaded-vs-fair-die-problem)
-  - [2. Neuron](#3-loaded-vs-fair-die-problem)
-  - [2. Layer](#3-loaded-vs-fair-die-problem)
-  - [2. Network](#3-loaded-vs-fair-die-problem)
-  - [2. Backpropagation Methods](#3-loaded-vs-fair-die-problem)
+  - [1. Abstract Activation Function](#1-abstract-activation-function)
+  - [2. Sigmoid Activation](#2-sigmoid-function)
+  - [3. Neuron](#3-neuron)
+  - [4. Layer](#4-layer)
+  - [5. Network](#5-network)
+  - [6. Backpropagation Methods](#6backpropagation-methods)
 
 ---
 
@@ -37,18 +37,23 @@ This project is meant to demonstrate a basic deep learning model from scratch, u
 ---
 
 ## Files
-### abstractActivation.py
+### 1. Abstract Activation Function
 - Purpose: to define an abstract function for any activation function to be chosen
+- Key Methods:
+  -Output(x): abstract method to be implemented to compute the activation function
+  -OutputPrime(x): abstract method to be implemented to compute the derivative of the activation funciton
 - Usage: to be inherited activation function, in this case, the sigmoid function. 
-### sigmoidActivation.py
+### 2. Sigmoid Activation
+- Definition: a sigmoid function is a mathematical function in the form σ(x)=1/(1+e^(−x)​). This creates an "S-shaped" curve which takes an input of x and outputs a value between 0 and 1.
+- Purpose: 
+- 
+### 3. Neuron
 
-### neuron.py
+### 4. Layer
 
-### layer.py
+### 5. Network
 
-### network.py
-
-### backpropagationMethods.py 
+### 6. Backpropagation Methods
 
 
 
